@@ -1,0 +1,49 @@
+{
+  "name": "ekstazi/async-binary-stream",
+  "description": "Set of amphp streams to work with binary data. It can read bytebuffer with specified length and write it.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Maxim Furtuna",
+      "email": "ekstazyst@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ekstazi/async-binary-stream/issues"
+  },
+  "keywords": [
+    "async",
+    "non-blocking",
+    "stream",
+    "amp",
+    "amphp",
+    "binary",
+    "byte buffer"
+  ],
+  "require": {
+    "php": ">=7.2",
+    "amphp/byte-stream": "^1.7",
+    "phpinnacle/buffer": "^1.0"
+  },
+  "require-dev": {
+    "amphp/phpunit-util": "^1.1",
+    "amphp/php-cs-fixer-config": "dev-master",
+    "phpunit/phpunit": "^8 || ^7"
+  },
+  "minimum-stability": "RC",
+  "autoload": {
+    "psr-4": {
+      "ekstazi\\stream\\binary\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ekstazi\\stream\\binary\\test\\": "test"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "phpdbg -qrr vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml",
+    "lint": "php vendor/bin/php-cs-fixer --diff  -v fix"
+  }
+}
