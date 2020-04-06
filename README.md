@@ -56,7 +56,7 @@ $recorder = new ByteRecorder($reader);
 
 $recorder->startRecord();
 /** @var ByteBuffer $buffer */
-$buffer = yield $reader->readBytes(4);
+$buffer = yield $recorder->readBytes(4);
 
 $opCode = $buffer->consumeInt16();
 $mask = $buffer->consumeInt16();
@@ -64,6 +64,6 @@ $mask = $buffer->consumeInt16();
 $buffer = yield $recorder->readBytes(12);
 // ....
 
-/** @var ByteBuffer $recorded  The data recorded after startRecord*/
+/** @var ByteBuffer $recorded  The data recorded after startRecord */
 $recorded = $recorder->stopRecord();
 ```
