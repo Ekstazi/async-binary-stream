@@ -8,7 +8,7 @@ use PHPinnacle\Buffer\ByteBuffer;
 
 /**
  * Write binary data from stream
- * Interface BinaryWriter
+ * Interface BinaryWriter.
  * @package ekstazi\stream\binary
  */
 interface BinaryWriter

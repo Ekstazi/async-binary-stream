@@ -10,7 +10,7 @@ use PHPinnacle\Buffer\ByteBuffer;
 
 /**
  * Read binary data from stream
- * Interface BinaryReader
+ * Interface BinaryReader.
  * @package ekstazi\stream\binary
  */
 interface BinaryReader
