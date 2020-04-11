@@ -6,7 +6,7 @@ use Amp\ByteStream\OutputStream;
 use Amp\Promise;
 use PHPinnacle\Buffer\ByteBuffer;
 
-class ByteWriter
+final class ByteWriter implements BinaryWriter
 {
 
     /**

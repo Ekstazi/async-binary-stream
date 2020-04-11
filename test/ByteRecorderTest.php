@@ -6,6 +6,7 @@ use Amp\ByteStream\InMemoryStream;
 use Amp\ByteStream\InputStream;
 use Amp\PHPUnit\AsyncTestCase;
 use Amp\Success;
+use ekstazi\stream\binary\BinaryReader;
 use ekstazi\stream\binary\ByteReader;
 use ekstazi\stream\binary\ByteRecorder;
 use PHPinnacle\Buffer\ByteBuffer;
@@ -16,7 +17,7 @@ class ByteRecorderTest extends AsyncTestCase
     {
         $inputStream = $this->createMock(InputStream::class);
 
-        $original = $this->createMock(ByteReader::class);
+        $original = $this->createMock(BinaryReader::class);
         $original->expects(self::once())
             ->method('getOriginalStream')
             ->willReturn($inputStream);
@@ -29,7 +30,7 @@ class ByteRecorderTest extends AsyncTestCase
     {
         $byteBuffer = new ByteBuffer('1234');
 
-        $original = $this->createMock(ByteReader::class);
+        $original = $this->createMock(BinaryReader::class);
         $original->expects(self::once())
             ->method('readBytes')
             ->with(4)

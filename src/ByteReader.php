@@ -9,7 +9,7 @@ use Amp\Promise;
 use PHPinnacle\Buffer\ByteBuffer;
 use function Amp\call;
 
-class ByteReader
+final class ByteReader implements BinaryReader
 {
     /**
      * @var InputStream

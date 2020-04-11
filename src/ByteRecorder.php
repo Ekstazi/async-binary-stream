@@ -8,10 +8,10 @@ use Amp\Promise;
 use PHPinnacle\Buffer\ByteBuffer;
 use function Amp\call;
 
-class ByteRecorder extends ByteReader
+final class ByteRecorder implements BinaryReader
 {
     /**
-     * @var ByteReader
+     * @var BinaryReader
      */
     private $byteReader;
 
@@ -20,7 +20,7 @@ class ByteRecorder extends ByteReader
      */
     private $recordBuffer;
 
-    public function __construct(ByteReader $byteReader)
+    public function __construct(BinaryReader $byteReader)
     {
         $this->byteReader = $byteReader;
     }
