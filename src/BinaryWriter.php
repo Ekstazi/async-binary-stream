@@ -7,7 +7,7 @@ use Amp\Promise;
 use PHPinnacle\Buffer\ByteBuffer;
 
 /**
- * Write binary data from stream
+ * Write binary data to stream
  * Interface BinaryWriter.
  * @package ekstazi\stream\binary
  */
